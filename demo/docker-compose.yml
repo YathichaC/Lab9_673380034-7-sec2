@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: lab9-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: lab9
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - lab9_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  lab9_postgres_data:

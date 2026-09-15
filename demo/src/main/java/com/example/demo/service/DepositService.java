@@ -31,5 +31,7 @@ public class DepositService {
 		depositTransaction.setAmount(amount);
 		depositTransaction.setAccount(account);
 		depositRepository.save(depositTransaction);
+
+		//throw new RuntimeException("Test Rollback");
 	}
 }
